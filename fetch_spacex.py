@@ -20,6 +20,9 @@ def download_image(image_url, path_to_image):
     if response.ok:
         with open(path_to_image, 'wb') as file:
             file.write(response.content)
+        return path_to_image
+    else:
+        return None
 
 
 if __name__ == '__main__':
